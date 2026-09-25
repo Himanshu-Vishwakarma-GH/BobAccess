@@ -71,7 +71,7 @@ Over **2.2 billion people** globally live with vision impairment. In modern ente
 BobAccess integrates IBM Bob at both the development and runtime levels:
 
 1. **Custom Model Context Protocol (MCP) Server (`bob-a11y-mcp`):**
-   * Configured in [`.bob/mcp.json`](file:///D:/IBM%20BOB%20-%20LabLab%20Hackathon/.bob/mcp.json) using the official protocol specification (`2024-11-05`).
+   * Configured in `.bob/mcp.json` using the official protocol specification (`2024-11-05`).
    * Exposes three specialized agent tools directly to IBM Bob:
      * `search_accessible_knowledge`: Performs semantic retrieval over corporate documents and returns spoken summaries.
      * `explain_technical_diagram`: Converts visual diagram contexts into audio walkthroughs.
@@ -91,8 +91,8 @@ BobAccess integrates IBM Bob at both the development and runtime levels:
 
 ### 1. Clone & Set Up Virtual Environment
 ```bash
-git clone https://github.com/your-username/bob-access.git
-cd bob-access
+git clone https://github.com/Himanshu-Vishwakarma-GH/BobAccess.git
+cd BobAccess
 python -m venv venv
 # Windows
 .\venv\Scripts\activate
@@ -115,7 +115,7 @@ python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 The server will automatically seed the sample enterprise architecture document (`arch-spec-42`) into the ChromaDB vector store upon startup.
 
 ### 4. Launch the Accessible Frontend
-Simply open [`frontend/index.html`](file:///D:/IBM%20BOB%20-%20LabLab%20Hackathon/frontend/index.html) in any web browser!
+Open `http://127.0.0.1:8000` in your browser — the frontend is served directly by FastAPI (required for microphone permissions in Chrome).
 
 ---
 
